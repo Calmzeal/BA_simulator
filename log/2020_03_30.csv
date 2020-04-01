@@ -1,0 +1,275 @@
+test_params.average_block_period = 0.25
+test_params.evil_rate = 0.2
+test_params.termination_time = 5400
+test_params.debug_allow_borrow = False
+
+1. Find the best time_out combination
+
+repeats=1000
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.2,average_lasting_time:2.88
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.3,average_lasting_time:2.89
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.4,average_lasting_time:3.01
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.5,average_lasting_time:2.8
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.6,average_lasting_time:2.7
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.7,average_lasting_time:2.71
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.2,average_lasting_time:2.85
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.3,average_lasting_time:2.88
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.4,average_lasting_time:2.81
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.5,average_lasting_time:2.92
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.6,average_lasting_time:2.72
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.7,average_lasting_time:2.48
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.2,average_lasting_time:2.83
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.3,average_lasting_time:2.88
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.4,average_lasting_time:2.86
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.5,average_lasting_time:2.92
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.6,average_lasting_time:2.57
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.7,average_lasting_time:2.5
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.2,average_lasting_time:2.82
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.3,average_lasting_time:2.94
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.4,average_lasting_time:2.83
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.5,average_lasting_time:2.93
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.6,average_lasting_time:2.45
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.7,average_lasting_time:2.46
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.2,average_lasting_time:2.88
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.3,average_lasting_time:2.97
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.4,average_lasting_time:2.95
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.5,average_lasting_time:2.9
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.6,average_lasting_time:2.4
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.7,average_lasting_time:2.41
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.2,average_lasting_time:3.04
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.3,average_lasting_time:2.92
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.4,average_lasting_time:2.95
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.5,average_lasting_time:2.91
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.6,average_lasting_time:2.47
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.7,average_lasting_time:2.42
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.2,average_lasting_time:2.96
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.3,average_lasting_time:2.97
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.4,average_lasting_time:2.86
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.5,average_lasting_time:2.98
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.6,average_lasting_time:2.56
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.9,attack_timeout:0.7,average_lasting_time:2.51
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.2,average_lasting_time:3.08
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.3,average_lasting_time:3.06
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.4,average_lasting_time:3.06
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.5,average_lasting_time:3.1
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.6,average_lasting_time:2.59
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.0,attack_timeout:0.7,average_lasting_time:2.58
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.2,average_lasting_time:3.06
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.3,average_lasting_time:3.16
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.4,average_lasting_time:3.13
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.5,average_lasting_time:3.1
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.6,average_lasting_time:2.59
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.1,attack_timeout:0.7,average_lasting_time:2.51
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.2,average_lasting_time:3.03
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.3,average_lasting_time:3.11
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.4,average_lasting_time:3.04
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.5,average_lasting_time:2.96
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.6,average_lasting_time:2.66
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.7,average_lasting_time:2.46
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.2,average_lasting_time:3.11
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.3,average_lasting_time:3.25
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.4,average_lasting_time:3.08
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.5,average_lasting_time:3.08
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.6,average_lasting_time:2.54
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:0.7,average_lasting_time:2.52
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.2,average_lasting_time:3.08
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.3,average_lasting_time:3.08
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.4,average_lasting_time:3.12
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.5,average_lasting_time:3.07
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.6,average_lasting_time:2.53
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.7,average_lasting_time:2.35
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.2,average_lasting_time:3.2
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.3,average_lasting_time:2.98
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.4,average_lasting_time:3.05
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.5,average_lasting_time:3.03
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.6,average_lasting_time:2.71
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.5,attack_timeout:0.7,average_lasting_time:2.45
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.2,average_lasting_time:3.02
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.3,average_lasting_time:3.03
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.4,average_lasting_time:3.15
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.5,average_lasting_time:3.11
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.6,average_lasting_time:2.45
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.545,attack_timeout:0.7,average_lasting_time:2.44
+
+partial conclusion
+most significant attack_timeout locate between 0.3 and 0.5
+most significant rencent_timeout locate between 1.1-1.5
+
+fine scan the possible combinations
+
+2. extra_send = -1
+
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.2,attack_timeout:0.3,average_lasting_time:3.42
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.3,attack_timeout:0.3,average_lasting_time:3.3
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.3,average_lasting_time:3.25
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.5,attack_timeout:0.3,average_lasting_time:2.96
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.3,average_lasting_time:2.79
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.7,attack_timeout:0.3,average_lasting_time:2.77
+latency:0.3,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.3,average_lasting_time:2.82
+
+3. Justify the hypothese:
+extra_send = - latency / block_generation_speed
+
+extra_send = -1
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:12.48
+[0.72, 2.27, 4.36, 5.64, 7.41, 9.28, 11.65, 14.5, 19.06, 26.23, 88.77]
+Executed in 34.81 seconds
+
+extra_send = 0
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:7.82
+[0.73, 1.32, 3.11, 4.3, 5.2, 6.03, 7.43, 9.08, 11.4, 16.28, 41.58]
+Executed in 29.26 seconds
+
+extra_send = -2
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:19.85
+[0.74, 1.79, 4.27, 5.71, 8.05, 10.82, 15.12, 21.69, 32.47, 47.95, 266.4]
+Executed in 57.20 seconds
+
+extra_send = -3
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:20.64
+[0.73, 1.21, 3.62, 4.73, 6.38, 8.46, 11.43, 16.03, 24.61, 48.47, 652.29]
+Executed in 56.41 seconds
+
+extra_send = -4
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:8.09
+[0.72, 1.18, 1.67, 4.2, 5.05, 6.09, 7.38, 8.93, 11.1, 16.37, 171.7]
+Executed in 26.81 seconds
+
+extra_send = 0
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.09,attack_timeout:0.6,average_lasting_time:8.72
+[0.73, 2.36, 4.02, 4.95, 6.03, 7.26, 8.74, 10.46, 12.55, 16.55, 43.71]
+Executed in 31.25 seconds
+
+Comparing with traditional methods:
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0.6,average_lasting_time:8.78
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.2,attack_timeout:0.6,average_lasting_time:8.16s
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.4,attack_timeout:0.6,average_lasting_time:8.07
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.6,attack_timeout:0.6,average_lasting_time:8.59
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0.8,attack_timeout:0.6,average_lasting_time:8.95
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1,attack_timeout:0.6,average_lasting_time:8.81
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.2,attack_timeout:0.6,average_lasting_time:9.12
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.4,attack_timeout:0.6,average_lasting_time:9.04
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.6,attack_timeout:0.6,average_lasting_time:9.27
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.8,attack_timeout:0.6,average_lasting_time:9.2
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2,attack_timeout:0.6,average_lasting_time:9.31
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.2,attack_timeout:0.6,average_lasting_time:9.21
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.4,attack_timeout:0.6,average_lasting_time:9.14
+
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.6,attack_timeout:0.6,average_lasting_time:9.42
+
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.8,attack_timeout:0.6,average_lasting_time:9.01
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0.6,average_lasting_time:9.36
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.2,attack_timeout:0.6,average_lasting_time:8.99
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.4,attack_timeout:0.6,average_lasting_time:8.66
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.6,attack_timeout:0.6,average_lasting_time:7.93
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.8,attack_timeout:0.6,average_lasting_time:8.17
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4,attack_timeout:0.6,average_lasting_time:7.53
+
+fixed extra_send, adjust withhold:
+
+latency:0.6,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:20.47
+latency:0.6,num_nodes:60,out_degree:3,withhold:2,recent_timeout:0,attack_timeout:0,average_lasting_time:17.26
+latency:0.6,num_nodes:60,out_degree:3,withhold:3,recent_timeout:0,attack_timeout:0,average_lasting_time:13.32
+latency:0.6,num_nodes:60,out_degree:3,withhold:4,recent_timeout:0,attack_timeout:0,average_lasting_time:11.11
+latency:0.6,num_nodes:60,out_degree:3,withhold:5,recent_timeout:0,attack_timeout:0,average_lasting_time:7.69
+latency:0.6,num_nodes:60,out_degree:3,withhold:6,recent_timeout:0,attack_timeout:0,average_lasting_time:6.69
+latency:0.6,num_nodes:60,out_degree:3,withhold:7,recent_timeout:0,attack_timeout:0,average_lasting_time:5.84
+latency:0.6,num_nodes:60,out_degree:3,withhold:8,recent_timeout:0,attack_timeout:0,average_lasting_time:4.88
+
+
+fix extra_send to 0,
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:26.9
+[1.44, 6.86, 9.78, 12.65, 15.93, 19.97, 25.22, 32.08, 41.7, 56.08, 228.48]
+Executed in 65.45 seconds
+
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.3,attack_timeout:1.2,average_lasting_time:26.53
+[1.46, 8.55, 11.19, 14.42, 16.97, 20.52, 24.57, 29.71, 37.98, 52.69, 182.23]
+Executed in 66.25 seconds
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.6,attack_timeout:1.2,average_lasting_time:30.76
+[1.96, 9.38, 12.29, 15.9, 18.99, 23.07, 28.47, 34.85, 44.83, 61.53, 188.17]
+Executed in 68.42 seconds
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.9,attack_timeout:1.2,average_lasting_time:33.52
+[1.93, 10.42, 13.01, 16.72, 20.86, 25.36, 33.16, 39.86, 48.96, 66.55, 202.21]
+Executed in 76.78 seconds
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.2,attack_timeout:1.2,average_lasting_time:31.96
+[2.14, 10.13, 13.44, 16.1, 19.42, 23.89, 29.23, 35.75, 46.07, 63.64, 208.13]
+Executed in 74.27 seconds
+
+extra_send = -6
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:45.43
+[1.4, 7.86, 10.55, 14.18, 17.69, 22.53, 27.74, 36.44, 51.01, 92.14, 1021.48]
+Executed in 95.91 seconds
+
+extra_send = -5
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:206.91
+[1.41, 9.54, 14.53, 20.59, 31.51, 59.36, 105.91, 183.29, 300.58, 565.19, 5400]
+Executed in 418.56 seconds
+
+extra_send = -4
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:208.42
+[1.36, 10.52, 15.67, 27.35, 49.8, 84.36, 125.54, 193.46, 278.37, 464.81, 5400]
+Executed in 385.25 seconds
+
+extra_send = -3
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:95.47
+[1.45, 10.94, 17.71, 27.11, 39.59, 56.76, 74.04, 99.91, 139.92, 218.86, 1831.57]
+Executed in 212.65 seconds
+
+extra_send = -2
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:71.03
+[1.4, 10.26, 15.2, 23.15, 30.93, 41.98, 56.24, 76.09, 106.37, 160.42, 873.94]
+Executed in 170.64 seconds
+
+extra_send = -1
+latency:1.2,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:43.22
+[2.08, 9.13, 13.23, 18.06, 23.0, 29.98, 39.48, 52.55, 68.38, 92.61, 231.45]
+Executed in 99.40 seconds
+
+4. Change the topology and justify the hypothesis
+
+extra_send = -6
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:7.73
+[1.22, 3.6, 4.99, 5.69, 6.25, 6.9, 7.81, 9.06, 10.43, 12.88, 39.4]
+Executed in 25.62 seconds
+
+extra_send = -5
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:9.69
+[1.32, 4.17, 5.35, 6.19, 7.07, 8.1, 9.41, 10.77, 13.18, 17.17, 59.5]
+Executed in 30.55 seconds
+
+extra_send = -4
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:15.5
+[1.18, 4.4, 5.82, 6.85, 8.73, 10.31, 12.31, 15.42, 20.79, 33.02, 133.87]
+Executed in 39.90 seconds
+
+extra_send = -3
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:27.28
+[1.28, 4.88, 6.19, 8.56, 11.36, 15.45, 21.05, 29.93, 43.51, 66.46, 270.76]
+Executed in 59.06 seconds
+
+extra_send = -2
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:19.81
+[1.34, 4.99, 6.94, 9.32, 11.78, 14.93, 18.22, 22.14, 30.3, 42.69, 155.95]
+Executed in 46.09 seconds
+
+extra_send = -1
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:16.4
+[1.28, 4.67, 6.31, 8.21, 9.98, 12.69, 15.64, 18.96, 23.82, 33.27, 106.29]
+Executed in 40.95 seconds
+
+extra_send = 0
+latency:1.2,num_nodes:60,out_degree:5,withhold:1,recent_timeout:0,attack_timeout:0,average_lasting_time:11.69
+[1.29, 3.92, 5.61, 6.84, 8.36, 9.98, 11.71, 13.56, 16.17, 21.88, 53.76]
+Executed in 36.44 seconds
