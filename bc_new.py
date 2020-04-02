@@ -312,12 +312,12 @@ def slave_simulator(env):
 
 if __name__=="__main__":
     cpu_num = multiprocessing.cpu_count()
-    repeats = 1000
+    repeats = 100
 
     print(f"repeats={repeats}")
     test_params = Parameters()
     test_params.average_block_period = 0.25
-    test_params.evil_rate = 0.2
+    test_params.evil_rate = 0.8
     test_params.termination_time = 5400
     test_params.debug_allow_borrow = False
     # test_params.debug_allow_borrow = True
@@ -328,8 +328,8 @@ if __name__=="__main__":
     withhold = 1
     for out_degree in [3]:
         for attack_timeout in [0]:
-            for timeout in [2.75,3,3.25,3.5,3.75,4,4.25,4.5,4.75,5,5.25,5.75,6,6.25,6.5,6.75,7]:
-                for extra_send in [0,-1,-2,-3]:
+            for timeout in [3.1]:
+                for extra_send in [-2]:
                     test_params.num_nodes = num_nodes
                     test_params.latency = latency
                     test_params.out_degree = out_degree

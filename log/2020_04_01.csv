@@ -104,6 +104,228 @@ latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:0,attack_timeou
 Executed in 87.22 seconds
 
 
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.75,attack_timeout:0,extra_send:0,average_lasting_time:40.98
+[2.05, 11.28, 15.34, 19.59, 24.65, 31.49, 38.04, 47.51, 61.72, 83.7, 289.99]
+Executed in 30.33 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.75,attack_timeout:0,extra_send:-1,average_lasting_time:56.8
+[1.52, 7.39, 11.46, 16.62, 23.03, 33.24, 45.27, 62.69, 89.05, 136.7, 989.2]
+Executed in 40.81 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.75,attack_timeout:0,extra_send:-2,average_lasting_time:505.73
+[1.51, 7.72, 10.32, 14.29, 21.49, 34.04, 62.81, 176.47, 447.26, 1335.46, 5400]
+Executed in 350.16 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.75,attack_timeout:0,extra_send:-3,average_lasting_time:592.27
+[1.48, 7.11, 9.79, 11.83, 17.03, 25.0, 37.93, 72.59, 406.36, 2347.96, 5400]
+Executed in 411.91 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0,extra_send:0,average_lasting_time:42.47
+[1.55, 10.45, 14.84, 19.7, 24.7, 30.51, 38.08, 49.19, 65.31, 91.96, 248.96]
+Executed in 32.05 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0,extra_send:-1,average_lasting_time:73.96
+[1.95, 7.28, 10.27, 15.84, 23.09, 34.85, 55.32, 78.8, 119.16, 189.85, 1074.04]
+Executed in 52.69 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0,extra_send:-2,average_lasting_time:1096.73
+[1.54, 7.73, 10.28, 13.46, 18.83, 28.92, 52.8, 311.84, 2053.67, 5400, 5400]
+Executed in 742.88 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0,extra_send:-3,average_lasting_time:344.59
+[1.54, 3.84, 9.05, 10.83, 13.36, 18.27, 24.06, 35.9, 67.33, 444.89, 5400]
+Executed in 248.85 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.25,attack_timeout:0,extra_send:0,average_lasting_time:46.91
+[2.03, 11.36, 15.94, 22.35, 27.69, 33.67, 42.91, 54.25, 72.84, 99.77, 343.68]
+Executed in 33.29 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.25,attack_timeout:0,extra_send:-1,average_lasting_time:79.76
+[1.43, 6.48, 10.01, 14.16, 20.69, 29.22, 45.97, 71.98, 122.13, 215.58, 1295.34]
+Executed in 55.13 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.25,attack_timeout:0,extra_send:-2,average_lasting_time:1370.6
+[1.52, 3.87, 9.37, 11.22, 15.7, 22.66, 41.53, 134.7, 5400, 5400, 5400]
+Executed in 961.95 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.25,attack_timeout:0,extra_send:-3,average_lasting_time:182.31
+[1.47, 5.4, 9.38, 11.15, 13.39, 16.96, 22.31, 30.2, 50.92, 146.49, 5400]
+
+Executed in 129.33 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.5,attack_timeout:0,extra_send:0,average_lasting_time:44.71
+[1.56, 11.54, 16.41, 21.45, 26.53, 33.76, 40.9, 50.74, 66.71, 91.11, 265.36]
+Executed in 32.95 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.5,attack_timeout:0,extra_send:-1,average_lasting_time:90.97
+[1.54, 5.95, 9.74, 13.47, 19.98, 29.24, 51.11, 85.09, 141.39, 236.08, 1455.59]
+Executed in 64.19 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.5,attack_timeout:0,extra_send:-2,average_lasting_time:1148.79
+[1.53, 4.96, 9.49, 11.24, 14.22, 21.99, 37.03, 92.4, 3821.25, 5400, 5400]
+Executed in 789.01 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.5,attack_timeout:0,extra_send:-3,average_lasting_time:60.45
+[1.45, 4.46, 8.76, 10.37, 12.06, 14.78, 18.73, 24.68, 34.65, 63.15, 5400]
+Executed in 49.53 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.75,attack_timeout:0,extra_send:0,average_lasting_time:49.67
+[2.12, 11.71, 17.18, 22.85, 28.78, 37.1, 46.72, 57.27, 74.41, 104.8, 336.58]
+Executed in 35.13 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.75,attack_timeout:0,extra_send:-1,average_lasting_time:96.3
+[1.51, 2.97, 8.95, 11.1, 15.61, 23.8, 42.32, 73.16, 129.13, 263.9, 1674.34]
+Executed in 66.71 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.75,attack_timeout:0,extra_send:-2,average_lasting_time:617.69
+[1.5, 3.51, 8.63, 10.06, 11.84, 15.74, 23.21, 37.31, 84.15, 4317.51, 5400]
+Executed in 410.09 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.75,attack_timeout:0,extra_send:-3,average_lasting_time:23.51
+[1.44, 3.74, 8.35, 9.93, 11.29, 12.93, 15.58, 20.44, 26.3, 42.56, 2275.81]
+Executed in 23.48 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4,attack_timeout:0,extra_send:0,average_lasting_time:46.59
+[1.59, 10.88, 15.8, 20.7, 26.54, 34.39, 43.19, 55.06, 70.17, 100.87, 330.46]
+Executed in 34.15 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4,attack_timeout:0,extra_send:-1,average_lasting_time:88.94
+[1.53, 4.12, 9.33, 11.21, 14.32, 20.66, 33.45, 60.05, 113.99, 252.01, 1917.61]
+Executed in 66.75 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4,attack_timeout:0,extra_send:-2,average_lasting_time:237.45
+[1.52, 3.92, 8.2, 9.84, 11.67, 14.59, 21.68, 31.41, 50.51, 154.45, 5400]
+Executed in 170.20 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4,attack_timeout:0,extra_send:-3,average_lasting_time:19.99
+[1.47, 4.5, 8.06, 9.89, 11.3, 13.27, 15.54, 19.13, 24.64, 35.23, 836.26]
+Executed in 16.20 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.25,attack_timeout:0,extra_send:0,average_lasting_time:49.46
+[1.55, 11.1, 16.45, 22.03, 29.09, 35.53, 45.08, 57.14, 74.91, 105.09, 309.59]
+Executed in 35.81 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.25,attack_timeout:0,extra_send:-1,average_lasting_time:77.0
+[1.54, 4.26, 9.44, 10.95, 13.21, 18.99, 31.77, 61.69, 108.63, 213.26, 1402.97]
+Executed in 56.29 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.25,attack_timeout:0,extra_send:-2,average_lasting_time:89.05
+[2.02, 4.05, 8.32, 9.71, 11.23, 13.48, 16.75, 23.71, 40.47, 76.85, 5400]
+Executed in 64.32 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.25,attack_timeout:0,extra_send:-3,average_lasting_time:17.45
+[1.5, 2.8, 6.03, 8.33, 9.98, 12.02, 13.68, 16.88, 21.31, 29.85, 1878.63]
+Executed in 18.28 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.5,attack_timeout:0,extra_send:0,average_lasting_time:46.11
+[2.12, 10.34, 15.86, 20.18, 26.02, 32.62, 41.08, 52.65, 70.26, 104.57, 295.9]
+Executed in 33.29 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.5,attack_timeout:0,extra_send:-1,average_lasting_time:56.65
+[1.42, 4.32, 8.87, 10.81, 13.18, 16.58, 24.5, 43.82, 74.72, 141.94, 1304.63]
+Executed in 42.12 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.5,attack_timeout:0,extra_send:-2,average_lasting_time:49.41
+[1.48, 4.16, 7.57, 9.51, 11.14, 12.91, 16.02, 21.7, 31.81, 65.08, 5400]
+Executed in 69.92 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.5,attack_timeout:0,extra_send:-3,average_lasting_time:14.37
+[1.45, 3.83, 6.03, 8.47, 10.06, 11.75, 13.37, 16.02, 19.3, 26.46, 129.19]
+Executed in 12.59 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.75,attack_timeout:0,extra_send:0,average_lasting_time:43.48
+[1.56, 10.15, 15.1, 19.77, 25.04, 31.78, 39.4, 50.59, 63.71, 88.64, 301.17]
+Executed in 31.95 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.75,attack_timeout:0,extra_send:-1,average_lasting_time:42.27
+[1.56, 4.16, 8.54, 10.26, 12.06, 14.71, 19.42, 30.91, 52.53, 101.34, 1157.77]
+Executed in 34.20 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.75,attack_timeout:0,extra_send:-2,average_lasting_time:33.76
+[1.54, 4.65, 6.8, 8.94, 10.56, 12.18, 14.76, 18.55, 26.96, 45.85, 5400]
+Executed in 43.01 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:4.75,attack_timeout:0,extra_send:-3,average_lasting_time:12.76
+[1.56, 4.16, 5.94, 7.35, 9.11, 10.57, 11.98, 14.41, 17.85, 24.31, 83.1]
+Executed in 11.31 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5,attack_timeout:0,extra_send:0,average_lasting_time:44.0
+[1.52, 10.42, 15.11, 19.85, 24.84, 31.03, 40.57, 50.63, 66.62, 90.42, 487.35]
+Executed in 32.16 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5,attack_timeout:0,extra_send:-1,average_lasting_time:33.35
+[1.54, 3.94, 7.31, 9.48, 10.79, 13.45, 17.41, 26.08, 44.27, 86.98, 983.48]
+Executed in 26.27 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5,attack_timeout:0,extra_send:-2,average_lasting_time:18.1
+[1.48, 4.47, 6.32, 8.17, 10.06, 11.57, 13.61, 16.68, 22.76, 37.3, 477.62]
+Executed in 14.57 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5,attack_timeout:0,extra_send:-3,average_lasting_time:12.12
+[1.55, 3.26, 5.9, 6.9, 8.41, 10.04, 11.67, 13.46, 16.69, 22.29, 85.17]
+Executed in 10.67 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.25,attack_timeout:0,extra_send:0,average_lasting_time:43.04
+[1.56, 10.11, 14.85, 20.09, 25.58, 31.36, 41.09, 50.47, 64.8, 91.4, 290.94]
+Executed in 31.61 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.25,attack_timeout:0,extra_send:-1,average_lasting_time:27.16
+[1.49, 4.34, 6.75, 9.07, 10.74, 12.53, 15.61, 21.62, 35.82, 65.68, 826.55]
+Executed in 23.32 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.25,attack_timeout:0,extra_send:-2,average_lasting_time:15.03
+[1.5, 3.79, 6.09, 7.5, 9.47, 11.08, 13.14, 15.79, 19.78, 31.6, 149.9]
+Executed in 12.87 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.25,attack_timeout:0,extra_send:-3,average_lasting_time:11.24
+[1.51, 4.78, 5.98, 6.74, 7.54, 9.06, 10.71, 12.74, 15.1, 19.67, 67.49]
+Executed in 9.97 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.75,attack_timeout:0,extra_send:0,average_lasting_time:36.7
+[2.05, 10.4, 13.74, 16.93, 22.2, 27.8, 34.34, 44.21, 56.59, 75.49, 192.61]
+Executed in 26.68 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.75,attack_timeout:0,extra_send:-1,average_lasting_time:19.34
+[1.51, 4.65, 6.26, 7.76, 9.61, 11.13, 13.0, 16.48, 24.88, 43.09, 253.7]
+Executed in 15.76 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.75,attack_timeout:0,extra_send:-2,average_lasting_time:13.07
+[1.4, 4.68, 5.9, 6.81, 7.66, 9.49, 11.6, 13.26, 17.0, 24.2, 131.15]
+Executed in 11.53 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:5.75,attack_timeout:0,extra_send:-3,average_lasting_time:10.11
+[1.5, 3.68, 5.81, 6.53, 7.22, 8.13, 9.51, 11.37, 13.9, 17.35, 83.25]
+Executed in 9.39 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6,attack_timeout:0,extra_send:0,average_lasting_time:36.3
+[1.49, 10.48, 13.74, 16.63, 20.64, 26.34, 33.08, 41.57, 54.49, 72.63, 302.42]
+Executed in 26.71 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6,attack_timeout:0,extra_send:-1,average_lasting_time:18.46
+[1.5, 4.58, 6.22, 7.59, 9.32, 11.19, 13.4, 16.72, 22.83, 42.04, 262.1]
+Executed in 15.14 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6,attack_timeout:0,extra_send:-2,average_lasting_time:11.66
+[1.54, 4.13, 5.89, 6.74, 7.55, 8.56, 10.42, 12.47, 15.62, 22.63, 92.58]
+Executed in 10.35 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6,attack_timeout:0,extra_send:-3,average_lasting_time:9.67
+[1.47, 4.53, 6.0, 6.66, 7.32, 8.0, 9.04, 10.63, 12.89, 16.36, 46.53]
+Executed in 8.88 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.25,attack_timeout:0,extra_send:0,average_lasting_time:32.84
+[1.49, 9.56, 13.27, 16.19, 20.43, 25.87, 30.95, 38.66, 48.52, 66.08, 166.86]
+Executed in 24.33 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.25,attack_timeout:0,extra_send:-1,average_lasting_time:14.45
+[1.5, 3.51, 5.86, 6.74, 7.73, 9.28, 11.59, 14.25, 19.34, 32.27, 130.26]
+Executed in 12.62 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.25,attack_timeout:0,extra_send:-2,average_lasting_time:10.88
+[1.52, 3.49, 5.66, 6.47, 7.24, 8.05, 9.28, 11.78, 14.63, 20.37, 85.96]
+Executed in 10.01 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.25,attack_timeout:0,extra_send:-3,average_lasting_time:9.52
+[1.53, 3.81, 5.72, 6.48, 7.21, 7.79, 8.76, 10.55, 12.9, 16.92, 45.32]
+Executed in 8.87 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.5,attack_timeout:0,extra_send:0,average_lasting_time:30.79
+[1.56, 9.47, 12.58, 16.31, 19.34, 23.63, 28.06, 35.31, 46.86, 60.84, 159.06]
+Executed in 22.73 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.5,attack_timeout:0,extra_send:-1,average_lasting_time:14.25
+[1.55, 4.01, 5.8, 6.75, 7.82, 9.09, 11.26, 13.59, 17.95, 30.1, 170.62]
+Executed in 12.49 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.5,attack_timeout:0,extra_send:-2,average_lasting_time:10.7
+[1.54, 3.03, 5.68, 6.47, 7.22, 8.05, 8.9, 11.1, 13.81, 20.17, 85.43]
+Executed in 9.70 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.5,attack_timeout:0,extra_send:-3,average_lasting_time:9.7
+[1.4, 4.02, 5.84, 6.67, 7.4, 7.94, 8.87, 10.56, 12.87, 17.22, 54.77]
+Executed in 8.99 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.75,attack_timeout:0,extra_send:0,average_lasting_time:27.85
+[1.5, 7.81, 10.74, 13.55, 17.14, 21.19, 26.81, 32.85, 40.88, 54.97, 206.01]
+Executed in 21.05 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.75,attack_timeout:0,extra_send:-1,average_lasting_time:12.59
+[1.54, 4.24, 5.83, 6.47, 7.23, 8.25, 9.44, 12.35, 15.91, 24.74, 130.38]
+Executed in 11.14 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.75,attack_timeout:0,extra_send:-2,average_lasting_time:10.48
+[1.47, 3.52, 5.67, 6.43, 7.05, 7.81, 8.77, 10.64, 14.11, 20.05, 82.29]
+Executed in 9.56 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:6.75,attack_timeout:0,extra_send:-3,average_lasting_time:9.26
+[1.47, 4.38, 6.0, 6.63, 7.2, 7.78, 8.7, 10.09, 12.29, 15.36, 41.42]
+Executed in 8.66 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:7,attack_timeout:0,extra_send:0,average_lasting_time:27.01
+[1.47, 8.1, 11.67, 13.95, 17.13, 20.64, 24.57, 30.7, 39.05, 51.83, 210.53]
+Executed in 20.46 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:7,attack_timeout:0,extra_send:-1,average_lasting_time:12.87
+[1.51, 4.44, 5.84, 6.58, 7.32, 8.36, 9.83, 12.57, 15.97, 25.35, 153.07]
+Executed in 11.37 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:7,attack_timeout:0,extra_send:-2,average_lasting_time:10.48
+[1.48, 4.05, 5.85, 6.63, 7.29, 7.96, 8.97, 11.09, 13.75, 18.81, 74.63]
+Executed in 9.54 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:7,attack_timeout:0,extra_send:-3,average_lasting_time:9.21
+[1.53, 4.23, 5.99, 6.77, 7.37, 8.01, 8.75, 9.93, 11.9, 15.17, 52.3]
+Executed in 8.53 seconds
+
+
+
 latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:1.25,attack_timeout:1.25,extra_send:0,average_lasting_time:33.44
 [2.28, 8.56, 12.01, 15.85, 19.85, 24.74, 30.16, 38.71, 49.61, 68.76, 303.36]
 Executed in 89.16 seconds
@@ -177,3 +399,50 @@ Executed in 37.07 seconds
 latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.75,attack_timeout:0,extra_send:-6,average_lasting_time:10.17
 [1.48, 3.87, 5.92, 7.07, 8.29, 9.39, 10.35, 11.84, 13.77, 17.08, 38.21]
 Executed in 34.88 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.8,attack_timeout:0,extra_send:-3,average_lasting_time:569.31
+[1.49, 6.93, 9.7, 11.7, 15.56, 20.36, 30.59, 56.65, 293.64, 2295.28, 5400]
+Executed in 369.42 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.85,attack_timeout:0,extra_send:-3,average_lasting_time:504.44
+[1.46, 7.27, 9.77, 12.15, 16.94, 23.21, 32.51, 55.36, 171.42, 1644.31, 5400]
+Executed in 322.63 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.9,attack_timeout:0,extra_send:-3,average_lasting_time:422.17
+[1.44, 4.44, 9.12, 10.91, 14.72, 19.97, 26.55, 41.68, 86.61, 1306.38, 5400]
+Executed in 287.13 seconds
+
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.8,attack_timeout:0,extra_send:-2,average_lasting_time:661.39
+[2.06, 7.6, 10.59, 14.49, 20.96, 31.87, 71.55, 183.39, 550.71, 2418.22, 5400]
+Executed in 459.49 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.85,attack_timeout:0,extra_send:-2,average_lasting_time:863.98
+[1.51, 6.25, 9.77, 13.26, 19.73, 36.16, 84.7, 287.38, 1170.65, 4574.97, 5400]
+Executed in 592.26 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.9,attack_timeout:0,extra_send:-2,average_lasting_time:928.25
+[1.5, 5.38, 9.61, 12.57, 18.63, 30.2, 66.06, 227.54, 1251.61, 5400, 5400]
+Executed in 627.66 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:2.95,attack_timeout:0,extra_send:-2,average_lasting_time:1023.98
+[1.46, 7.53, 9.97, 13.98, 20.02, 32.68, 65.2, 265.2, 1496.1, 5400, 5400]
+Executed in 721.57 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3,attack_timeout:0,extra_send:-2,average_lasting_time:1203.98
+[1.54, 6.41, 9.97, 12.87, 18.35, 29.02, 67.32, 325.35, 3320.43, 5400, 5400]
+Executed in 805.68 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.05,attack_timeout:0,extra_send:-2,average_lasting_time:1137.35
+[1.53, 7.49, 10.27, 13.43, 19.22, 30.06, 56.92, 208.58, 2567.39, 5400, 5400]
+Executed in 740.58 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.1,attack_timeout:0,extra_send:-2,average_lasting_time:1455.84
+[1.45, 5.97, 9.36, 11.6, 17.39, 30.45, 59.55, 627.82, 5400, 5400, 5400]
+Executed in 940.10 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.15,attack_timeout:0,extra_send:-2,average_lasting_time:1291.26
+[1.47, 5.58, 9.6, 12.68, 17.24, 25.01, 53.42, 215.98, 5286.71, 5400, 5400]
+Executed in 929.08 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.2,attack_timeout:0,extra_send:-2,average_lasting_time:1374.41
+[1.94, 7.57, 9.71, 11.58, 16.36, 26.31, 50.02, 192.62, 5400, 5400, 5400]
+Executed in 908.06 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.3,attack_timeout:0,extra_send:-2,average_lasting_time:1286.57
+[1.52, 3.97, 9.62, 11.79, 16.04, 22.4, 35.96, 77.32, 5400, 5400, 5400]
+Executed in 835.61 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.35,attack_timeout:0,extra_send:-2,average_lasting_time:1391.29
+[1.42, 4.61, 9.56, 12.08, 16.42, 25.27, 46.04, 153.8, 5400, 5400, 5400]
+Executed in 923.36 seconds
+latency:1.25,num_nodes:60,out_degree:3,withhold:1,recent_timeout:3.4,attack_timeout:0,extra_send:-2,average_lasting_time:1284.01
+[1.49, 7.26, 9.9, 11.73, 15.82, 20.84, 36.14, 100.09, 5400, 5400, 5400]
+Executed in 855.99 seconds
