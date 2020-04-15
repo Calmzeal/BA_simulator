@@ -2,9 +2,8 @@ import collections
 import random
 
 class StrategyFixedPeerLatency:
-    def __init__(self, withhold, extra_send, one_way_latency):  # Checked
+    def __init__(self, extra_send, one_way_latency):  # Checked
         # Config fields
-        self.withhold = withhold
         self.extra_send = extra_send
         # The one way latency between adversary and honest nodes.
         self.one_way_latency = one_way_latency
@@ -66,22 +65,18 @@ class StrategyFixedPeerLatency:
             self.approx_left_target_subtree_weight_diff = left_weight_diff_approx
             self.approx_right_target_subtree_weight_diff = right_weight_diff_approx
 
-
         global_subtree_weight_diff = self.left_subtree_weight - self.right_subtree_weight
-
-        self.withhold_done = True\
-            if len(self.left_withheld_blocks_queue) + len(self.right_withheld_blocks_queue) >= self.withhold\
-            else False
-        extra_send = self.extra_send
+        extra_send = 0
 
         diff_sector = -global_subtree_weight_diff if global_subtree_weight_diff<0 else global_subtree_weight_diff+1
 
+
         if diff_sector < 3:
-            extra_send -= 0.9
+            extra_send -= self.extra_send.withhold
         elif diff_sector == 3:
-            extra_send += 0.1
+            extra_send += self.extra_send.extra1
         else:
-            extra_send +=1
+            extra_send += self.extra_send.extra2
 
         left_send_count = -self.approx_left_target_subtree_weight_diff + extra_send
         right_send_count = self.approx_right_target_subtree_weight_diff + 1 + extra_send
@@ -95,11 +90,10 @@ class StrategyFixedPeerLatency:
 
 
         self.max_time_deplacement = 0
-        if self.withhold_done:
-            for i in range(left_send_count):
-                self.pop_withheld_block_to_send("L", timestamp, blocks_to_send)
-            for i in range(right_send_count):
-                self.pop_withheld_block_to_send("R", timestamp, blocks_to_send)
+        for i in range(left_send_count):
+            self.pop_withheld_block_to_send("L", timestamp, blocks_to_send)
+        for i in range(right_send_count):
+            self.pop_withheld_block_to_send("R", timestamp, blocks_to_send)
         if self.max_time_deplacement > 0:
             #self.oldest_block_time_deplacement_list.append(f"Attack at {timestamp}")
             self.oldest_block_time_deplacement_list.append(

@@ -13,8 +13,10 @@ class Parameters:
         return
 
     def __repr__(self):
-        return f"latency:{self.latency},num_nodes:{self.num_nodes},out_degree:{self.out_degree},withhold:{self.withhold},extra_send:{self.extra_send}"
-
+        if hasattr(self,"latency"):
+            return f"latency:{self.latency},num_nodes:{self.num_nodes},out_degree:{self.out_degree},extra_send:{self.extra_send}"
+        else:
+            return f"(withhold:{self.withhold},extra1:{self.extra1},extra2:{self.extra2})"
 class NodeLocalView:
     def __init__(self, node_id):
         self.node_id = node_id
@@ -53,7 +55,6 @@ class Simulator:
     def __init__(self, env, attack_params):
         self.env = env
         self.adversary = StrategyFixedPeerLatency(
-            attack_params["withhold"],
             attack_params["extra_send"],
             attack_params["one_way_latency"],
         )
@@ -311,7 +312,6 @@ class Simulator:
 
 def slave_simulator(env):
     return round(Simulator(env, {
-        "withhold": env.withhold,
         "extra_send": env.extra_send,
         "one_way_latency": 0.1}).main(), 2)
 
@@ -321,20 +321,25 @@ if __name__=="__main__":
 
     print(f"repeats={repeats}")
     test_params = Parameters()
-    test_params.average_block_period = 0.5
+    test_params.average_block_period = 0.25
     test_params.evil_rate = 0.2
     test_params.termination_time = 5400
 
     p = multiprocessing.Pool(cpu_num)
     num_nodes = 60
     latency = 1.25
-    withhold = 1
-    for out_degree in [3]:
-        for extra_send in [0]:
+    out_degree = 3
+    extra_send = Parameters()
+    extra_send.withhold = 1
+    extra_send.extra1 = 0
+    extra_send.extra2 = 1
+    for withhold in [1]:
+        for extra1 in [0]:
+            extra_send.withhold = withhold
+            extra_send.extra1 = extra1
             test_params.num_nodes = num_nodes
             test_params.latency = latency
             test_params.out_degree = out_degree
-            test_params.withhold = withhold
             test_params.extra_send = extra_send
             begin = time.time()
             attack_last_time = sorted(p.map(slave_simulator, [test_params] * repeats))
