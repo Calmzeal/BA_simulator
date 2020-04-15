@@ -1,5 +1,5 @@
 import collections
-import queue
+import random
 
 class StrategyFixedPeerLatency:
     def __init__(self, withhold, extra_send, one_way_latency):  # Checked
@@ -77,16 +77,22 @@ class StrategyFixedPeerLatency:
         diff_sector = -global_subtree_weight_diff if global_subtree_weight_diff<0 else global_subtree_weight_diff+1
 
         if diff_sector < 3:
-            extra_send -= 1
-        elif global_subtree_weight_diff > 3:
-            extra_send += 1
+            extra_send -= 0.9
+        elif diff_sector == 3:
+            extra_send += 0.1
+        else:
+            extra_send +=1
 
-        left_send_count = int(-self.approx_left_target_subtree_weight_diff + extra_send)
-        right_send_count = int(self.approx_right_target_subtree_weight_diff + 1 + extra_send)
+        left_send_count = -self.approx_left_target_subtree_weight_diff + extra_send
+        right_send_count = self.approx_right_target_subtree_weight_diff + 1 + extra_send
         if self.left_subtree_weight >= self.right_subtree_weight:
             left_send_count = 0
+            right_send_count = int(right_send_count)#+(random.random() < right_send_count-int(right_send_count))
         else:
             right_send_count = 0
+            left_send_count = int(left_send_count)# + (random.random() < left_send_count-int(left_send_count))
+
+
 
         self.max_time_deplacement = 0
         if self.withhold_done:

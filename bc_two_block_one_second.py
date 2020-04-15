@@ -317,11 +317,11 @@ def slave_simulator(env):
 
 if __name__=="__main__":
     cpu_num = multiprocessing.cpu_count()
-    repeats = 100
+    repeats = 1000
 
     print(f"repeats={repeats}")
     test_params = Parameters()
-    test_params.average_block_period = 0.25
+    test_params.average_block_period = 0.5
     test_params.evil_rate = 0.2
     test_params.termination_time = 5400
 
