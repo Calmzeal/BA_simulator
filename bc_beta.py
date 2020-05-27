@@ -152,6 +152,7 @@ class Simulator:
         attack_param.extra_send = env.extra_send
         self.adversary = StrategyFixedPeerLatency(attack_param)
         self.merge_count = 0
+        self.measurements = {"lasting_time" : self.env.termination_time}
         self.event_queue = queue.PriorityQueue()
 
     def setup_chain(self):
@@ -268,7 +269,8 @@ class Simulator:
                 self.merge_count = self.merge_count + 1 if self.is_chain_merged() else 0
                 if self.merge_count > 10000:
                     # print(f"Chain merged after {timestamp} seconds")
-                    return timestamp
+                    self.measurements["lasting_time"] = timestamp
+                    return
             # Event 4
             if event_type == Simulator.EVENT_QUEUE_EMPTY:
                 # Can't happen because of mining.
@@ -285,7 +287,6 @@ class Simulator:
         group.append(statistic[-1])
         print(f"Attacks being executed {len(statistic)} times, the 10 percentile result is {group}")
 
-        return self.env.termination_time
 
     def is_chain_merged(self):
         side_per_node = list(map(
@@ -365,12 +366,16 @@ class Simulator:
     def main(self):
         self.setup_chain()
         self.setup_network()
-        return self.run_test()
+        self.run_test()
 
 
 def slave_simulator(env):
-    return round(Simulator(env).main(), 2)
+    experiment = Simulator(env)
+    experiment.main()
+    return experiment.measurements
 
+def proj(stream, indicator):
+    return list(map(lambda x:x[indicator], stream))
 
 if __name__ == "__main__":
     cpu_num = multiprocessing.cpu_count()
@@ -378,7 +383,7 @@ if __name__ == "__main__":
     repeats = 1000
     print(f"repeats={repeats}")
     # modifiable parameters
-    num_nodes = 60
+    num_nodes = 20
     latency = 1.25
     out_degree = 3
     withhold = 1
@@ -413,7 +418,9 @@ if __name__ == "__main__":
             test_params.extra_send = extra_send
 
             begin = time.time()
-            attack_last_time = sorted(p.map(slave_simulator, [test_params] * repeats))
+            measurements_stream = p.map(slave_simulator, [test_params] * repeats)
+            lasting_time_stream = proj(measurements_stream, "lasting_time")
+            attack_last_time = sorted(lasting_time_stream)
             print(f"{test_params},average_lasting_time:{round(sum(attack_last_time) / repeats, 2)}")
             samples = 10
             print(list(map(lambda percentile: attack_last_time[int((repeats - 1) * percentile / samples)],
