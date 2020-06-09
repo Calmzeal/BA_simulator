@@ -4,8 +4,6 @@ import random
 import multiprocessing
 import copy
 import time
-
-
 from strategy_fixed_peer_latency_beta import StrategyFixedPeerLatency
 
 
@@ -143,7 +141,7 @@ class Simulator:
         [94.04, 208.082, 111.349, 103.343, 104.072, 38.178, 205.549, 73.288, 69.407, 105.464, 129.584, 82.41, 126.681,
          239.586, 246.168, 114.586, 262.434, 160.829, 21.182, 1]]
 
-    GEODELAY = [(list(map(lambda x:x/1000+0.2, row))) for row in GEODELAY_ORIGIN]
+    GEODELAY = [(list(map(lambda x:x/1000, row))) for row in GEODELAY_ORIGIN]
 
     def __init__(self, env):
         self.env = env
@@ -154,7 +152,6 @@ class Simulator:
         attack_param.extra_send = env.extra_send
         self.adversary = StrategyFixedPeerLatency(attack_param)
         self.merge_count = 0
-        self.attack_lasting_time = self.env.termination_time
         self.event_queue = queue.PriorityQueue()
 
     def setup_chain(self):
@@ -194,13 +191,10 @@ class Simulator:
 
         # 3. Drop the unconnected topologies
         self.latency_map = g
-        self.diameter = 0
         for i in range(N):
             for j in range(N):
                 if i != j and g[i][j] > 1e8:
                     return False
-                elif g[i][j] < 1e8:
-                    self.diameter = max(self.diameter, g[i][j])
         return True
 
     def setup_network(self):
@@ -274,8 +268,7 @@ class Simulator:
                 self.merge_count = self.merge_count + 1 if self.is_chain_merged() else 0
                 if self.merge_count > 10000:
                     # print(f"Chain merged after {timestamp} seconds")
-                    self.attack_lasting_time = timestamp
-                    return
+                    return timestamp
             # Event 4
             if event_type == Simulator.EVENT_QUEUE_EMPTY:
                 # Can't happen because of mining.
@@ -291,7 +284,8 @@ class Simulator:
             range(10)))
         group.append(statistic[-1])
         print(f"Attacks being executed {len(statistic)} times, the 10 percentile result is {group}")
-        return
+
+        return self.env.termination_time
 
     def is_chain_merged(self):
         side_per_node = list(map(
@@ -371,19 +365,17 @@ class Simulator:
     def main(self):
         self.setup_chain()
         self.setup_network()
-        self.run_test()
+        return self.run_test()
+
 
 def slave_simulator(env):
-    slave = Simulator(env)
-    slave.main()
-    print(slave.diameter)
-    return round(slave.attack_lasting_time, 2)
+    return round(Simulator(env).main(), 2)
 
 
 if __name__ == "__main__":
     cpu_num = multiprocessing.cpu_count()
     p = multiprocessing.Pool(cpu_num)
-    repeats = 100
+    repeats = 1000
     print(f"repeats={repeats}")
     # modifiable parameters
     num_nodes = 60
@@ -398,7 +390,7 @@ if __name__ == "__main__":
     test_params.average_block_period = 0.5
     test_params.evil_rate = 0.2
     test_params.termination_time = 5400
-    test_params.one_way_latency = 0.001
+    test_params.one_way_latency = 0.1
     extra_send = ParamSet()
 
     # partially fixed parameters

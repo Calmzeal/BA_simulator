@@ -317,7 +317,7 @@ if __name__=="__main__":
     print(f"repeats={repeats}")
     test_params = Parameters()
     test_params.average_block_period = 0.25
-    test_params.evil_rate = 0.8
+    test_params.evil_rate = 0.3
     test_params.termination_time = 5400
     test_params.debug_allow_borrow = False
     # test_params.debug_allow_borrow = True
@@ -328,8 +328,8 @@ if __name__=="__main__":
     withhold = 1
     for out_degree in [3]:
         for attack_timeout in [0]:
-            for timeout in [3.1]:
-                for extra_send in [-2]:
+            for timeout in [3.1,3.25,3.3]:
+                for extra_send in [0,-1,-2,-3]:
                     test_params.num_nodes = num_nodes
                     test_params.latency = latency
                     test_params.out_degree = out_degree
