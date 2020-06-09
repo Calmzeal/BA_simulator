@@ -143,7 +143,7 @@ class Simulator:
         [94.04, 208.082, 111.349, 103.343, 104.072, 38.178, 205.549, 73.288, 69.407, 105.464, 129.584, 82.41, 126.681,
          239.586, 246.168, 114.586, 262.434, 160.829, 21.182, 1]]
 
-    GEODELAY = [(list(map(lambda x:x/1000+0.2, row))) for row in GEODELAY_ORIGIN]
+    GEODELAY = [(list(map(lambda x:x/1000, row))) for row in GEODELAY_ORIGIN]
 
     def __init__(self, env):
         self.env = env
@@ -162,28 +162,15 @@ class Simulator:
         for i in range(self.env.num_nodes):
             self.nodes.append(NodeLocalView(i))
 
-    def topo_generator(self, N, out_degree):
-        # 1. Generate valid connections
-        # \correct only when latency<1e9.
-        g = [[1e9] * N for i in range(N)]
-        g_out_degree = [0] * N
-        for i in range(N):
-            nodes_to_choose = set(range(N))
-            while out_degree - g_out_degree[i] > 0 and len(nodes_to_choose) > 0:
-                peer = random.sample(nodes_to_choose, 1)[0]
-                nodes_to_choose.remove(peer)
-                while (peer == i or g[i][peer] < 1e8 or g_out_degree[peer] >= out_degree) \
-                        and len(nodes_to_choose) > 0:
-                    peer = random.sample(nodes_to_choose, 1)[0]
-                    nodes_to_choose.remove(peer)
-                if not (peer == i or g[i][peer] < 1e8 or g_out_degree[peer] >= out_degree):
-                    g[i][peer] = self.env.latency * random.uniform(0.75, 1.25)
-                    g[peer][i] = g[i][peer]
-                    g_out_degree[i] += 1
-                    g_out_degree[peer] += 1
+    def topo_generator(self, N, delay):
+        # 1. Allocate nodes to cities
 
-        if N == 20:
-            g = Simulator.GEODELAY
+        g_city = [random.randint(0,19) for i in range(N)]
+        g = [[1e9] * N for i in range(N)]
+        for i in range(N):
+            for j in range(N):
+                g[i][j] = Simulator.GEODELAY[g_city[i]][g_city[j]] + delay * random.uniform(0.8,1.2)
+
 
         # 2. Calculate shortest message passing paths using Floyd Algorithm
         self.origin_topo = copy.deepcopy(g)
@@ -386,9 +373,9 @@ if __name__ == "__main__":
     repeats = 100
     print(f"repeats={repeats}")
     # modifiable parameters
-    num_nodes = 60
+    num_nodes = 400
     latency = 1.25
-    out_degree = 3
+    out_degree = 0.5
     withhold = 1
     extra1 = 0
     extra2 = 1
@@ -405,17 +392,17 @@ if __name__ == "__main__":
     test_params.num_nodes = num_nodes
     test_params.latency = latency
     test_params.out_degree = out_degree
-    # extra_send.withhold = withhold
+    extra_send.withhold = withhold
     # extra_send.extra1 = extra1
     extra_send.extra2 = extra2
 
     # parameters to test
-    for withhold in [1]:
+    for out_degree in [0.5]:
         for extra1 in [0]:
             # test_params.num_nodes = num_nodes
             # test_params.latency = latency
-            # test_params.out_degree = out_degree
-            extra_send.withhold = withhold
+            test_params.out_degree = out_degree
+            # extra_send.withhold = withhold
             extra_send.extra1 = extra1
             # extra_send.extra2 = extra2
             test_params.extra_send = extra_send
