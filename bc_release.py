@@ -162,15 +162,26 @@ class Simulator:
         for i in range(self.env.num_nodes):
             self.nodes.append(NodeLocalView(i))
 
-    def topo_generator(self, N, delay):
-        # 1. Allocate nodes to cities
-
+    def topo_generator(self, N, out_degree):
+        # 1. Generate valid connections
+        # \correct only when latency<1e9.
         g_city = [random.randint(0,19) for i in range(N)]
         g = [[1e9] * N for i in range(N)]
+        g_out_degree = [0] * N
         for i in range(N):
-            for j in range(N):
-                g[i][j] = Simulator.GEODELAY[g_city[i]][g_city[j]] + delay * random.uniform(0.8,1.2)
-
+            nodes_to_choose = set(range(N))
+            while out_degree - g_out_degree[i] > 0 and len(nodes_to_choose) > 0:
+                peer = random.sample(nodes_to_choose, 1)[0]
+                nodes_to_choose.remove(peer)
+                while (peer == i or g[i][peer] < 1e8 or g_out_degree[peer] >= out_degree) \
+                        and len(nodes_to_choose) > 0:
+                    peer = random.sample(nodes_to_choose, 1)[0]
+                    nodes_to_choose.remove(peer)
+                if not (peer == i or g[i][peer] < 1e8 or g_out_degree[peer] >= out_degree):
+                    g[i][peer] = Simulator.GEODELAY[g_city[i]][g_city[peer]] + self.env.latency * random.uniform(0.8, 1.2)
+                    g[peer][i] = g[i][peer]
+                    g_out_degree[i] += 1
+                    g_out_degree[peer] += 1
 
         # 2. Calculate shortest message passing paths using Floyd Algorithm
         self.origin_topo = copy.deepcopy(g)
@@ -373,9 +384,9 @@ if __name__ == "__main__":
     repeats = 100
     print(f"repeats={repeats}")
     # modifiable parameters
-    num_nodes = 400
-    latency = 1.25
-    out_degree = 0.5
+    num_nodes = 2000
+    latency = 0.2
+    out_degree = 3
     withhold = 1
     extra1 = 0
     extra2 = 1
@@ -397,7 +408,7 @@ if __name__ == "__main__":
     extra_send.extra2 = extra2
 
     # parameters to test
-    for out_degree in [0.5]:
+    for out_degree in [3]:
         for extra1 in [0]:
             # test_params.num_nodes = num_nodes
             # test_params.latency = latency
